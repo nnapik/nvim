@@ -11,10 +11,10 @@ return require('lazy').setup({
     },
 
     --colorscheme
-    {'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end },
+    { 'morhetz/gruvbox',                 config = function() vim.cmd.colorscheme("gruvbox") end },
 
     --intellisense
-    {'nvim-treesitter/nvim-treesitter', cmd = 'TSUpdate' },
+    { 'nvim-treesitter/nvim-treesitter', cmd = 'TSUpdate' },
 
     -- Language Server integration
     -- LSP Support
@@ -25,7 +25,7 @@ return require('lazy').setup({
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
     'L3MON4D3/LuaSnip',
-    {'VonHeikemen/lsp-zero.nvim', branch='v2.x'},
+    { 'VonHeikemen/lsp-zero.nvim', branch = 'v2.x' },
 
     -- Snippets
     'SirVer/ultisnips',
@@ -33,7 +33,7 @@ return require('lazy').setup({
 
     -- Autopair for [] () {}
     {'windwp/nvim-autopairs', config = function ()
-        require('nvim-autopairs').setup{}
+            require('nvim-autopairs').setup {}
     end},
 
     -- tmux integration
@@ -52,8 +52,16 @@ return require('lazy').setup({
             vim.keymap.set('n', "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight)
             vim.keymap.set('n', "<C-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive)
             vim.keymap.set('n', "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext)
-
         end
+    },
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+        }
     }
 }
 )
