@@ -6,6 +6,10 @@ cmp.setup({
     completion = {
         completeopt = 'menu,menuone,noinsert'
     },
+    sources = {
+        { name = 'nvim_lua'},
+        { name = 'nvim_lsp'}
+    },
     mapping = cmp.mapping.preset.insert({
         -- `Enter` key to confirm completion
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
@@ -15,3 +19,4 @@ cmp.setup({
         ['<C-b>'] = cmp_action.luasnip_jump_backward(),
     })
 })
+
