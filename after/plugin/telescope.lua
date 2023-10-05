@@ -5,5 +5,3 @@ vim.keymap.set('n', '<leader>gf', function()
 end)
 vim.keymap.set('n', '<leader>fb', builtin.buffers)
 
-
-local setup = require('telescope')
