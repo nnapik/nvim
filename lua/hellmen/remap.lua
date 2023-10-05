@@ -66,3 +66,7 @@ vim.keymap.set("n", "<leader>cu", ":<C-B>silent <C-E>s/^V<C-R>=escape(b:Comment_
 --quickfix window
 vim.keymap.set("n", "<c-n>", ":cn<CR>")
 vim.keymap.set("n", "<c-p>", ":cp<CR>")
+
+--code actions
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+
