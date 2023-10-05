@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("hellmen.lazy")
 require("hellmen.remap")
 require("hellmen.set")
+require("hellmen.comment")
 
 --if opening neovide, change directory to current file's directory
 if vim.g.neovide then
