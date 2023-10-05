@@ -2,12 +2,12 @@ vim.g.mapleader = " "
 
 vim.keymap.set("n", "<leader>x", function ()
     vim.cmd.write()
-    vim.cmd.Ex()
+    vim.cmd.Neotree()
 end)
 
 vim.keymap.set("n", "<leader>w", vim.cmd.write)
 vim.keymap.set("n", "<leader>q", vim.cmd.quit)
-vim.keymap.set("n", "<leader>.", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>.", vim.cmd.Neotree)
 vim.keymap.set("n", "<leader>d", vim.cmd.bdelete)
 vim.keymap.set("i", "jk", "<ESC>")
 vim.keymap.set("n", ";", ":")
