@@ -6,7 +6,11 @@ vim.keymap.set("n", "<leader>x", function()
 end)
 
 vim.keymap.set("n", "<leader>w", vim.cmd.write)
-vim.keymap.set("n", "<leader>q", vim.cmd.quit)
+if vim.g.neovide then
+    vim.keymap.set("n", "<leader>q", vim.cmd.bd)
+else
+    vim.keymap.set("n", "<leader>q", vim.cmd.quit)
+end
 vim.keymap.set("n", "<leader>.", vim.cmd.Neotree)
 vim.keymap.set("n", "<leader>d", vim.cmd.bdelete)
 vim.keymap.set("i", "jk", "<ESC>")
