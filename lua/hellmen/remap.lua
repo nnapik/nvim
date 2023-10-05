@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>x", function ()
+vim.keymap.set("n", "<leader>x", function()
     vim.cmd.write()
     vim.cmd.Neotree()
 end)
@@ -39,7 +39,7 @@ vim.keymap.set("n", "<CR>", ":noh<CR>j", { silent = true })
 vim.keymap.set("n", "<leader>=", "gg=G''")
 
 --reformat json file
-vim.keymap.set("n", "=j", function ()
+vim.keymap.set("n", "=j", function()
     vim.cmd(":%!python -m tool json.tool<CR>")
 end)
 
