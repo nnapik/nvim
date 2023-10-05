@@ -59,6 +59,12 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 
 --add/remove comments
 vim.api.nvim_create_autocmd("FileType", {
+    pattern = "zsh",
+    callback = function()
+        vim.b.Comment_leader = "#"
+    end
+})
+vim.api.nvim_create_autocmd("FileType", {
     pattern = "python",
     callback = function()
         vim.b.Comment_leader = "#"
