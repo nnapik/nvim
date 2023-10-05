@@ -63,3 +63,6 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.keymap.set("n", "<leader>cc", ":<C-B>silent <C-E>s/^/<C-R>=escape(b:Comment_leader,'/')<CR>/<CR>:nohlsearch<CR>", { silent = true })
 vim.keymap.set("n", "<leader>cu", ":<C-B>silent <C-E>s/^V<C-R>=escape(b:Comment_leader,'/')<CR>//e<CR>:nohlsearch<CR>", { silent = true })
 
+--quickfix window
+vim.keymap.set("n", "<c-n>", ":cn<CR>")
+vim.keymap.set("n", "<c-p>", ":cp<CR>")
