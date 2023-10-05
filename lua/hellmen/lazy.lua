@@ -28,6 +28,22 @@ return require('lazy').setup({
     'L3MON4D3/LuaSnip',
     { 'VonHeikemen/lsp-zero.nvim', branch = 'v2.x' },
 
+    -- golang
+    {
+        "ray-x/go.nvim",
+        dependencies = {
+            "ray-x/guihua.lua",
+            "neovim/nvim-lspconfig",
+            "nvim-treesitter/nvim-treesitter"
+        },
+        config = function ()
+            require("go").setup()
+        end,
+        event = {"CmdlineEnter"},
+        ft = {"go", 'gomod'},
+        build = ':lua require("go.install").update_all_sync()'
+    },
+
     -- Snippets
     'SirVer/ultisnips',
     'honza/vim-snippets',
