@@ -44,6 +44,12 @@ return require('lazy').setup({
         build = ':lua require("go.install").update_all_sync()'
     },
 
+    -- Debug tools
+    { "mfussenegger/nvim-dap" },
+    { 'rcarriga/nvim-dap-ui'},
+--    { "mfussenegger/nvim-dap-ui" },
+    { "theHamsta/nvim-dap-virtual-text" },
+
     -- Snippets
     'SirVer/ultisnips',
     'honza/vim-snippets',
