@@ -20,7 +20,6 @@ vim.keymap.set("n", "k", "gk", { silent = true })
 
 vim.keymap.set("n", "<leader>l", vim.cmd.vs)
 vim.keymap.set("n", "<leader>j", vim.cmd.sp)
-vim.keymap.set("n", "<leader>wd", vim.cmd.close)
 
 vim.keymap.set("n", "<leader>tn", vim.cmd.tabnew)
 vim.keymap.set("n", "<leader>tl", vim.cmd.tabnext)
@@ -33,8 +32,7 @@ vim.keymap.set("n", "<leader><Tab>", vim.cmd.bnext)
 vim.keymap.set("n", "<leader>bh", vim.cmd.bprev)
 vim.keymap.set("n", "<leader>bd", vim.cmd.bdelete)
 
-vim.keymap.set("n", "<leader>ev", ":e ~/.config/nvim<CR>")
-vim.keymap.set("n", "<leader>ov", ":e ~/.config/nvim.bak/init.vim<CR>")
+vim.keymap.set("n", "<leader>ev", ":e "..vim.fn.stdpath('config').."<CR>")
 vim.keymap.set("n", "<leader>so", vim.cmd.so)
 
 --remove highlight with a <CR>
