@@ -15,6 +15,8 @@ return require('lazy').setup({
 
     --intellisense
     { 'nvim-treesitter/nvim-treesitter', cmd = 'TSUpdate' },
+    -- integrated terminal
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
 
     -- Language Server integration
     -- LSP Support
