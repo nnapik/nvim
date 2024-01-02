@@ -15,8 +15,11 @@ return require('lazy').setup({
 
     -- Git marks
     { 'lewis6991/gitsigns.nvim' },
+
     --intellisense
     { 'nvim-treesitter/nvim-treesitter', cmd = 'TSUpdate' },
+    { 'towolf/vim-helm' },
+
     -- integrated terminal
     {'akinsho/toggleterm.nvim', version = "*", config = true},
 
@@ -29,7 +32,7 @@ return require('lazy').setup({
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-nvim-lua',
-    { 'VonHeikemen/lsp-zero.nvim', branch = 'v2.x' },
+    { 'VonHeikemen/lsp-zero.nvim',      branch = 'v2.x' },
 
     -- golang
     {
@@ -39,18 +42,18 @@ return require('lazy').setup({
             "neovim/nvim-lspconfig",
             "nvim-treesitter/nvim-treesitter"
         },
-        config = function ()
+        config = function()
             require("go").setup()
         end,
-        event = {"CmdlineEnter"},
-        ft = {"go", 'gomod'},
+        event = { "CmdlineEnter" },
+        ft = { "go", 'gomod' },
         build = ':lua require("go.install").update_all_sync()'
     },
 
     -- Debug tools
     { "mfussenegger/nvim-dap" },
-    { 'rcarriga/nvim-dap-ui'},
---    { "mfussenegger/nvim-dap-ui" },
+    { 'rcarriga/nvim-dap-ui' },
+    --    { "mfussenegger/nvim-dap-ui" },
     { "theHamsta/nvim-dap-virtual-text" },
 
     -- Snippets
