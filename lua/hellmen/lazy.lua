@@ -13,6 +13,8 @@ return require('lazy').setup({
     --colorscheme
     { 'morhetz/gruvbox',                 config = function() vim.cmd.colorscheme("gruvbox") end },
 
+    -- Git marks
+    { 'lewis6991/gitsigns.nvim' },
     --intellisense
     { 'nvim-treesitter/nvim-treesitter', cmd = 'TSUpdate' },
     -- integrated terminal
