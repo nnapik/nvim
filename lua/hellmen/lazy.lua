@@ -52,8 +52,9 @@ return require('lazy').setup({
 
     -- Debug tools
     { "mfussenegger/nvim-dap" },
-    { 'rcarriga/nvim-dap-ui' },
-    --    { "mfussenegger/nvim-dap-ui" },
+--    { 'rcarriga/nvim-dap-ui' },
+    { 'mfussenegger/nvim-dap-python' },
+    { "mfussenegger/nvim-dap-ui" },
     { "theHamsta/nvim-dap-virtual-text" },
 
     -- Snippets
