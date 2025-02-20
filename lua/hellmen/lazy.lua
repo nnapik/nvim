@@ -12,6 +12,7 @@ return require('lazy').setup({
 
     --colorscheme
     { 'morhetz/gruvbox',                 config = function() vim.cmd.colorscheme("gruvbox") end },
+    { 'norcalli/nvim-colorizer.lua' },
 
     -- Git marks
     { 'lewis6991/gitsigns.nvim' },
